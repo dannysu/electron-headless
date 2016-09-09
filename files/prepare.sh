@@ -3,6 +3,8 @@ set -e
 source /electron-headless/buildconfig
 set -x
 
+apt-get update
+
 ## Install HTTPS support for APT.
 $minimal_apt_get_install apt-transport-https ca-certificates
 

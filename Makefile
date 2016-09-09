@@ -1,2 +1,2 @@
 all:
-	docker build --rm=true -t dannysu/electron-headless .
+	docker build --rm=true --no-cache -t dannysu/electron-headless .
