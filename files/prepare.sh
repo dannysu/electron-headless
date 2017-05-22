@@ -3,6 +3,7 @@ set -e
 source /electron-headless/buildconfig
 set -x
 
+##make the transport-https and ca-certificates packages available
 apt-get update
 
 ## Install HTTPS support for APT.
@@ -14,9 +15,9 @@ sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list
 
 cat /electron-headless/nodesource.gpg.key | apt-key add -
 
-## Creating apt sources list file for the NodeSource Node.js 4.x LTS Argon repo...
-echo 'deb https://deb.nodesource.com/node_4.x trusty main' > /etc/apt/sources.list.d/nodesource.list
-echo 'deb-src https://deb.nodesource.com/node_4.x trusty main' >> /etc/apt/sources.list.d/nodesource.list
+## Creating apt sources list file for the NodeSource Node.js 6.x LTS Boron repo...
+echo 'deb https://deb.nodesource.com/node_6.x trusty main' > /etc/apt/sources.list.d/nodesource.list
+echo 'deb-src https://deb.nodesource.com/node_6.x trusty main' >> /etc/apt/sources.list.d/nodesource.list
 
 apt-get update
 
