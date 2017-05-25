@@ -14,4 +14,4 @@ $minimal_apt_get_install libnotify-dev dbus-x11
 # Install dependencies needed by newer Electron
 $minimal_apt_get_install libxss1
 
-npm install -g electron@1.6.8
+npm install -g electron@1.6.2
